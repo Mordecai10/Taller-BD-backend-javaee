@@ -7,5 +7,6 @@
 		<class>model.Usuario</class>
 		<class>model.EntradaU</class>
 		<class>model.Ruta</class>
+		<class>model.Ruta_has_usuario</class>
 	</persistence-unit>
 </persistence>
