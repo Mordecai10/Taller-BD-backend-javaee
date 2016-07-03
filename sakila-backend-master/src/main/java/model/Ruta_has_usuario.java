@@ -30,13 +30,16 @@ public class Ruta_has_usuario implements Serializable{
   @Column(name="idusuario",unique=true,nullable=false)
   private int idusuario;
 
-  @ManyToOne
-	@PrimaryKeyJoinColumn(name="idruta", referencedColumnName="idruta")
-	private Ruta ruta;
+  @Column(name="pertenencia",nullable=false)
+  private int pertenencia;
 
-	@ManyToOne
-	@PrimaryKeyJoinColumn(name="idusuario", referencedColumnName="idusuario")
-private Usuario usuario;
+  @ManyToOne
+  @PrimaryKeyJoinColumn(name="idruta",referencedColumnName="idruta")
+  private Ruta ruta;
+
+  @ManyToOne
+  @PrimaryKeyJoinColumn(name="idusuario",referencedColumnName="idusuario")
+  private Usuario usuario;
 
   public Ruta_has_usuario(){
   }
@@ -70,5 +73,12 @@ private Usuario usuario;
   }
   public void setUsuario(Usuario usuario){
     this.usuario=usuario;
+  }
+
+  public int getPertenencia(){
+    return this.pertenencia;
+  }
+  public void setPertenencia(int pertenencia){
+    this.pertenencia=pertenencia;
   }
 }

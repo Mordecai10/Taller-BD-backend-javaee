@@ -48,8 +48,7 @@ public class Ruta implements Serializable{
   @Column(name="fin_ubi_y",nullable=false)
   private float fin_ubi_y;
 
-  @Column(name="pertenencia",nullable=false)
-  private int pertenencia;
+  
 
   public  Ruta(){
 
@@ -72,7 +71,7 @@ public class Ruta implements Serializable{
   public float getCalificacion(){
     return calificacion;
   }
-  public void setCalificacion(float calificacionS){
+  public void setCalificacion(float calificacion){
     this.calificacion=calificacion;
   }
 
@@ -103,11 +102,6 @@ public class Ruta implements Serializable{
     this.fin_ubi_y=fin_ubi_y;
   }
 
-  public int getPertenencia(){
-    return pertenencia;
-  }
-  public void setPertenencia(int pertenencia){
-    this.pertenencia=pertenencia;
-  }
+
 
 }
