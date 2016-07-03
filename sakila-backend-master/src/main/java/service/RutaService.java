@@ -24,24 +24,25 @@ public class RutaService{
   Logger logger = Logger.getLogger(RutaService.class.getName());
 
   @GET
-  @Produces({"application/xml","application/json"})
-  public List<Ruta> findAll(){
-    return rutaFacadeEJB.findAll();
-  }
+    @Produces({"application/xml","application/json"})
+    public List<Ruta> findAll(){
+      return rutaFacadeEJB.findAll();
+    }
 
   @GET
-  @Produces({"application/xml","application/json"})
-  public Ruta find(@PathParam("id") Integer id){
-    return rutaFacadeEJB.find(id);
-  }
-
-  @POST
     @Path("{id}")
     @Produces({"application/xml","application/json"})
+    public Ruta find(@PathParam("id") Integer id){
+      return rutaFacadeEJB.find(id);
+    }
+
+  @POST
+    @Consumes({"application/xml","application/json"})
     public void create(Ruta entity){
       rutaFacadeEJB.create(entity);
     }
   @PUT
+    @Path("{id}")
     @Consumes({"application/xml","application/json"})
     public void edit(@PathParam("id")Integer id, Ruta entity){
       entity.setIdRuta(id.intValue());

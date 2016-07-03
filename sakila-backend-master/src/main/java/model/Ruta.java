@@ -62,41 +62,41 @@ public class Ruta implements Serializable{
   public String getNombreRuta(){
     return nombreRuta;
   }
-  public void setNombreRuta(){
+  public void setNombreRuta(String nombreRuta){
     this.nombreRuta=nombreRuta;
   }
 
   public float getCalificacion(){
     return calificacion;
   }
-  public void setCalificacion(){
+  public void setCalificacion(float calificacionS){
     this.calificacion=calificacion;
   }
 
   public float getInicio_ubi_x(){
     return inicio_ubi_x;
   }
-  public void setInicio_ubi_x(){
+  public void setInicio_ubi_x(float inicio_ubi_x){
     this.inicio_ubi_x=inicio_ubi_x;
   }
   public float getInicio_ubi_y(){
     return inicio_ubi_y;
   }
-  public void setInicio_ubi_y(){
+  public void setInicio_ubi_y(float inicio_ubi_y){
     this.inicio_ubi_y=inicio_ubi_y;
   }
 
   public float getFin_ubi_x(){
     return fin_ubi_x;
   }
-  public void setFin_ubi_x(){
+  public void setFin_ubi_x(float fin_ubi_x){
     this.fin_ubi_x=fin_ubi_x;
   }
 
   public float getFin_ubi_y(){
     return fin_ubi_y;
   }
-  public void setFin_ubi_y(){
+  public void setFin_ubi_y(float fin_ubi_y){
     this.fin_ubi_y=fin_ubi_y;
   }
 
