@@ -48,6 +48,9 @@ public class Ruta implements Serializable{
   @Column(name="fin_ubi_y",nullable=false)
   private float fin_ubi_y;
 
+  @Column(name="pertenencia",nullable=false)
+  private int pertenencia;
+
   public  Ruta(){
 
   }
@@ -100,6 +103,11 @@ public class Ruta implements Serializable{
     this.fin_ubi_y=fin_ubi_y;
   }
 
-
+  public int getPertenencia(){
+    return pertenencia;
+  }
+  public void setPertenencia(int pertenencia){
+    this.pertenencia=pertenencia;
+  }
 
 }
